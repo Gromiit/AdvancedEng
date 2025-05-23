@@ -1,0 +1,47 @@
+/* welcome 페이지 */
+
+body {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+h1 {
+  color: #508fc2;
+}
+
+button {
+  width: 100px;
+  padding: 10px;
+  background-color: #0e639c;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #1177bb;
+}
+
+a {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  background-color: #ce9178;
+  margin: 15px;
+  padding: 5px;
+  border-radius: 13px;
+  text-decoration: none;
+}
+
+a:link {
+  color: rgb(237, 226, 226);
+}
+
+a:visited {
+  color: rgb(237, 226, 226);
+}
+
+img {
+  width: 20%;
+}

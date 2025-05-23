@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap");
+
+body {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#container {
+  display: flex;
+  gap: 40px;
+  padding-top: 70px;
+}
+
+form {
+  background-color: #252526;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  width: 300px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #508fc2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #9cdcfe;
+}
+
+input {
+  display: flex;
+  justify-content: center;
+  width: 94%;
+  padding: 8px;
+  margin-bottom: 15px;
+  background-color: #1e1e1e;
+  border: 1px solid #3c3c3c;
+  border-radius: 4px;
+  color: #ce9178;
+  outline: none;
+}
+
+input:focus {
+  border-color: #007acc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0e639c;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #1177bb;
+}

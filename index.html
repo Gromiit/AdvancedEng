@@ -1,11 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>logInPage</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a>ddd</a>
+    <div id="container">
+      <div class="signUp">
+        <form action="#">
+          <h1>회원가입</h1>
+          <label for="name">이름</label>
+          <input id="name" placeholder="이름을 입력하세요" /><br />
+          <label for="age">나이</label>
+          <input
+            id="age"
+            placeholder="나이를 입력하세요"
+            type="number"
+            min="0"
+            value="0"
+          /><br />
+          <label for="id">아이디</label>
+          <input id="id" placeholder="아이디를 입력하세요" /><br />
+          <label for="pw">비밀번호</label>
+          <input
+            id="pw"
+            placeholder="비밀번호를 입력하세요"
+            type="password"
+          /><br />
+          <button class="signUpBttn" onclick="signUpBttn()">회원가입</button>
+        </form>
+      </div>
+      <div class="logIn">
+        <form action="#">
+          <h1>로그인</h1>
+          <label for="idLog">아이디</label>
+          <input id="idLog" placeholder="아이디를 입력하세요" /><br />
+          <label for="pwLog">비밀번호</label>
+          <input
+            id="pwLog"
+            type="password"
+            placeholder="비밀번호를 입력하세요"
+          />
+          <button class="logInBttn" onclick="logInBttn()">로그인</button>
+        </form>
+      </div>
+    </div>
   </body>
+  <script src="index.js"></script>
 </html>
