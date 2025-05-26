@@ -4,31 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="welcome.css" />
-    <title>welCome</title>
+    <title>첨단학부</title>
   </head>
   <body>
-    <nav class="navbar">
-      <div id="navlogo">
-        <img
-          src="https://opening-attachments.greetinghr.com/2024-08-09/1136e03e-5199-45dc-b7c9-4fccf1c8258e/.png"
-        />
+    <div id="main">
+      <div class="header">
+        <img src="./AE.png" alt="" />
+        <h1>첨단학부</h1>
+        <button class="logoutbtn" onclick="logout()">로그아웃</button>
       </div>
-      <ul class="nav-menu">
-        <li>정지훈</li>
-        <li>배정현</li>
-        <li>김성민</li>
-      </ul>
-    </nav>
-    <h1 id="welcome">welcome</h1>
-    <a href="index.html">돌아가기</a>
 
-    <div id="container2">
-      <h1>할 일 목록</h1>
-      <span></span><br />
-      <input id="todo" />
-      <button id="add-button" onclick="saveTodoList()">+</button>
-      <div id="todo-list"></div>
+      <nav class="navigation">
+        <button class="javabtn" onclick="javaBtn()">JAVA</button>
+        <button class="pythonbtn" onclick="pythonBtn()">Python</button>
+        <button class="rbtn" onclick="rBtn()">R</button>
+      </nav>
     </div>
+
+    <script src="welcome.js"></script>
   </body>
-  <script src="welcome.js"></script>
 </html>
