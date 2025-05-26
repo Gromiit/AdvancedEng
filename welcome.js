@@ -3,6 +3,10 @@ function logout() {
   window.location.href = "index.html";
 }
 
+function reload() {
+  window.location.href = "welcome.html";
+}
+
 function javaBtn() {
   window.location.href = "java.html";
 }
