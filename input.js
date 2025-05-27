@@ -46,4 +46,5 @@ function FinishBtn() {
   Board.value = "";
   Details.value = "";
   history.back();
+  location.reload(true);
 }
