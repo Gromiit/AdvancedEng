@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input</title>
+  </head>
+  <body>
+    <h1>게시글 작성</h1>
+    <div class="inputContainer">
+      <button id="outBtn" onclick="backBtn()">x</button>
+      <legend>
+        <label for="title">제목</label>
+        <input id="title" type="text" /><br />
+        <label for="board">게시판 선택</label>
+        <select id="board">
+          <br />
+          <option value="JAVA">JAVA</option>
+          <option value="Python">Python</option>
+          <option value="R">R</option></select
+        ><br />
+        <label for="detail">내용</label>
+        <input id="detail" type="text" />
+      </legend>
+      <button id="submitBtn" onclick="FinishBtn()">등록하기</button>
+    </div>
+  </body>
+  <script src="input.js"></script>
+</html>

@@ -1,0 +1,63 @@
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 20px;
+  font-size: larger;
+}
+
+li a:link {
+  color: black;
+}
+
+li a:visited {
+  color: black;
+}
+
+li a:active {
+  color: black;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+div h3 {
+  display: flex;
+  justify-content: center;
+}
+
+button a {
+  text-decoration: none;
+}
+
+button a:link {
+  color: black;
+}
+
+button a:visited {
+  color: black;
+}
+
+button a:active {
+  color: black;
+}

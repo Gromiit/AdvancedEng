@@ -3,24 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="welcome.css" />
-    <title>R</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Programming</title>
   </head>
-  <body>
-    <div id="main">
-      <div class="header">
-        <img src="./AE.png" onclick="reload()" />
-        <h1>첨단학부</h1>
-        <button class="logoutbtn" onclick="logout()">로그아웃</button>
-      </div>
-
-      <nav class="navigation">
-        <button class="javabtn" onclick="javaBtn()">JAVA</button>
-        <button class="pythonbtn" onclick="pythonBtn()">Python</button>
-        <button class="rbtn" onclick="rBtn()">R</button>
-      </nav>
+  <body onload="showPost('R')">
+    <h1>Programming</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">JAVA</a></li>
+        <li><a href="python.html">Python</a></li>
+        <li><a href="r.html">R</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="postBox"></div>
     </div>
-
-    <script src="welcome.js"></script>
+    <button><a href="input.html">작성하기</a></button>
   </body>
+  <script src="index.js"></script>
 </html>

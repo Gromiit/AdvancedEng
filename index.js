@@ -1,42 +1,44 @@
-function signUpBttn() {
-  event.preventDefault();
+function showPost(language) {
+  const PostBox = document.querySelector(".postBox");
+  PostBox.innerHTML = "";
 
-  const name = document.getElementById("name").value;
-  const age = document.getElementById("age").value;
-  const id = document.getElementById("id").value;
-  const pw = document.getElementById("pw").value;
+  let index = 0;
+  while (true) {
+    const key = language + index;
+    const value = localStorage.getItem(key);
+    if (!value) break;
 
-  if (!name || !age || !id || !pw) {
-    alert("모든 정보를 입력해주세요.");
-    return;
+    const post = JSON.parse(value);
+    PostBox.innerHTML += `
+        <div class="post" onclick="location.href='post.html'">
+          <h3>${post.제목}</h3>
+          <h4>${post.내용}</h4>
+          <p>${post.시간}</p>
+        </div>
+      `;
+    index++;
   }
 
-  const info = { name, age, id, pw };
-  let count = Number(localStorage.getItem("userCount") || 0) + 1;
-
-  localStorage.setItem(`user${count}`, JSON.stringify(info));
-  localStorage.setItem("userCount", count);
-
-  alert("회원가입 완료!");
-
-  location.reload(true);
-}
-
-function logInBttn() {
-  event.preventDefault();
-
-  const idLog = document.getElementById("idLog").value;
-  const pwLog = document.getElementById("pwLog").value;
-  const count = Number(localStorage.getItem("userCount") || 0);
-
-  for (let i = 0; i <= count; i++) {
-    const info = JSON.parse(localStorage.getItem(`user${i}`));
-    if (info && info.id === idLog && info.pw === pwLog) {
-      localStorage.setItem("loggedInUser", info.id);
-      window.location.href = "welcome.html";
-      return;
-    }
+  if (index === 0) {
+    PostBox.innerHTML = "<p>게시물이 없습니다.</p>";
   }
-
-  alert("아이디 또는 비밀번호가 틀렸습니다.");
 }
+
+document.addEventListener("click", function (e) {
+  const postDiv = e.target.closest(".post");
+  if (postDiv) {
+    const title = postDiv.querySelector("h3").textContent;
+    const content = postDiv.querySelector("h4").textContent;
+    const time = postDiv.querySelector("p").textContent;
+
+    const posted = {
+      title: title,
+      content: content,
+      time: time,
+    };
+
+    localStorage.setItem("posted", JSON.stringify(posted));
+
+    location.href = "post.html";
+  }
+});
