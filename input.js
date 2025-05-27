@@ -8,7 +8,7 @@ function backBtn() {
   history.back();
 }
 
-let javaIndex = Number(localStorage.getItem("JAVA_index")) || 0;
+let javaIndex = Number(localStorage.getItem("Java_index")) || 0;
 let pythonIndex = Number(localStorage.getItem("Python_index")) || 0;
 let rIndex = Number(localStorage.getItem("R_index")) || 0;
 
@@ -22,10 +22,10 @@ function FinishBtn() {
 
   let key = "";
 
-  if (postDetail.옵션 === "JAVA") {
-    key = "JAVA" + javaIndex;
+  if (postDetail.옵션 === "Java") {
+    key = "Java" + javaIndex;
     javaIndex++;
-    localStorage.setItem("JAVA_index", javaIndex);
+    localStorage.setItem("Java_index", javaIndex);
   } else if (postDetail.옵션 === "Python") {
     key = "Python" + pythonIndex;
     pythonIndex++;
@@ -35,7 +35,7 @@ function FinishBtn() {
     rIndex++;
     localStorage.setItem("R_index", rIndex);
   } else {
-    alert("옵션이 잘못되었습니다. JAVA, Python, R 중 하나여야 합니다.");
+    alert("옵션이 잘못되었습니다. Java, Python, R 중 하나여야 합니다.");
     return;
   }
 
@@ -45,4 +45,5 @@ function FinishBtn() {
   Title.value = "";
   Board.value = "";
   Details.value = "";
+  history.back();
 }
