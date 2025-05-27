@@ -45,6 +45,5 @@ function FinishBtn() {
   Title.value = "";
   Board.value = "";
   Details.value = "";
-  history.back();
-  location.reload(true);
+  window.location.href = "index.html";
 }
